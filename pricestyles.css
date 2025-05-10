@@ -1,0 +1,88 @@
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.pricing-container {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: space-around; /* Space out the cards evenly */
+    margin-top: 20px;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+.card {
+    background-color: #2a2a2a; /* Darker card background for contrast */
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px; /* Width of each card */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 10px; /* Add margin for spacing */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7);
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.price {
+    font-size: 32px;
+    color: #ff4081; /* Highlight price color */
+    margin: 10px 0;
+}
+
+button {
+    background-color: #ff4081; /* Button color */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e91e63; /* Darker shade on hover */
+}
+a:link, a:visited {
+    background-color: #ff4081; /* Button color */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #e91e63; /* Darker shade on hover */
+}
+
+.featured {
+    border: 2px solid #ff4081; /* Highlight featured plan */
+    position: relative;
+    z-index: 1; /* Bring featured card to the front */
+}
+
+ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 10px 0; /* Add margin for spacing */
+}
+
+ul li {
+    margin: 5px 0; /* Space between list items */
+}

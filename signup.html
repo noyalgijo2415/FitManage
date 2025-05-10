@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Sign Up</title>
+    <link rel="stylesheet" href="stylessign.css">
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Sign Up for Our Gym</h1>
+        <form action="signup.php" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="height">Height (cm)</label>
+                <input type="number" id="height" name="height" required>
+            </div>
+            <div class="form-group">
+                <label for="weight">Weight (kg)</label>
+                <input type="number" id="weight" name="weight" required>
+            </div>
+            <div class="form-group">
+                <label for="bmi">BMI</label>
+                <input type="number" id="bmi" name="bmi" step="0.1" required>
+            </div>
+            <div class="form-group">
+                <label>Have you been to a gym before?</label>
+                <label><input type="radio" name="gym-experience" value="yes" required> Yes</label>
+                <label><input type="radio" name="gym-experience" value="no"> No</label>
+            </div>
+            <div class="form-group">
+                <label>Do you need a personal trainer?</label>
+                <label><input type="radio" name="personal-trainer" value="yes" required> Yes</label>
+                <label><input type="radio" name="personal-trainer" value="no"> No</label>
+            </div>
+            <div class="form-group">
+                <label for="membership-type">Membership Type</label>
+                <select id="membership-type" name="membership-type" required>
+                    <option value="basic">Basic</option>
+                    <option value="premium">Premium</option>
+                    <option value="family">Family</option>
+                </select>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+</body>
+</html>

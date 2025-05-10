@@ -1,0 +1,260 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    background: linear-gradient(135deg, #eef2ff, #d6d6ff);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* 📌 Dashboard Container */
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* 📌 Sidebar */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, #6366F1, #8B5CF6);
+    color: white;
+    padding: 25px;
+    border-radius: 12px 0 0 12px;
+    position: relative;
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.2s;
+    font-size: 16px;
+    text-align: center;
+}
+
+.sidebar ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+}
+
+/* 📌 Toggle Button for Mobile */
+.sidebar-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+/* 📌 Main Content */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 0 12px 12px 0;
+}
+
+/* Headings */
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    animation: slideIn 0.6s ease-in-out;
+}
+
+h2 {
+    font-size: 20px;
+    color: #444;
+    margin-top: 25px;
+}
+
+/* 📌 Alerts */
+.payment-alert {
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.alert {
+    background: rgba(255, 0, 0, 0.1);
+    color: red;
+    border-left: 5px solid red;
+    padding: 10px;
+}
+
+.success {
+    background: rgba(0, 128, 0, 0.1);
+    color: green;
+    border-left: 5px solid green;
+    padding: 10px;
+}
+
+/* 📌 Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: linear-gradient(135deg, #6366F1, #8B5CF6);
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background: #fafafa;
+}
+
+tr:hover {
+    background: #f1f1f1;
+}
+
+/* 📌 Status Colors */
+.available {
+    color: green;
+    font-weight: bold;
+}
+
+.in-use {
+    color: orange;
+    font-weight: bold;
+}
+
+.maintenance {
+    color: red;
+    font-weight: bold;
+}
+
+/* 📌 Buttons */
+button {
+    background: linear-gradient(135deg, #6366F1, #8B5CF6);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+button:hover {
+    background: #4F46E5;
+    transform: scale(1.05);
+}
+
+/* 📌 Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        text-align: center;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar ul li {
+        display: block;
+        width: 100%;
+    }
+
+    .sidebar ul li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .sidebar-toggle {
+        display: block;
+    }
+
+    .main-content {
+        border-radius: 0 0 12px 12px;
+    }
+}
+
+/* 📌 Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

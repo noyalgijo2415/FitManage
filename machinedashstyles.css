@@ -1,0 +1,3 @@
+.available { color: green; font-weight: bold; }
+.in-use { color: orange; font-weight: bold; }
+.maintenance { color: red; font-weight: bold; }
